@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  --color-red : #ff4531;
+  --color-orange : #ff9f0a;
+  --color-yellow : #ffd601;
+  --color-green : #32d74b;
+  --color-gray : #98989d;
+  --color-dark : #333333;
+}
+
+/* Foggy background */
+.foggy-background {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    to bottom,
+    #d3d3d3 0%,
+    #c0c0c0 50%,
+    #a9a9a9 100%
+  );
+}
+
+/* Semi-transparent fog layers */
+.fog {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.7) 0%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  animation: moveFog 10s infinite linear;
+}
+
+/* Fog animation */
+@keyframes moveFog {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translate(50%, 50%);
+  }
+}
+
+
+
+@layer components{
+  .btn{
+    @apply h-4 w-4 rounded-full ;
+  }
+}
