@@ -1,4 +1,4 @@
-import { Gmail, LinkedIn, Drive } from "../assets/icons/Index";
+import { Drive } from "../assets/icons/Index";
 import { useContext } from "react";
 import { motion } from "framer-motion";
 import DesktopContext from "../context/DesktopContext";
