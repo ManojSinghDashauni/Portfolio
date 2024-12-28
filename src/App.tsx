@@ -1,39 +1,33 @@
 import { useContext } from "react";
-import Desktop from "./components/Desktop";
-import Drag from "./components/Drag";
-import { Model } from "./components/Model";
-import DesktopContext from "./context/DesktopContext";
-import Music from "./components/Music";
-import Wallpaper from "./components/Wallpaper";
+import {BioData, Desktop, Drag, Model, Music, Project, ProjectModel, Tip, Wallpaper} from "./components/Index";
 import Swish from "./assets/music/Swish_Hit_1.wav";
-import Tip from "./components/Tip";
+import DesktopContext from "./context/DesktopContext";
+
+
 
 export default function App() {
   const sound = new Audio(Swish);
-  console.log(sound);
-  const { show, wallpaper } = useContext(DesktopContext);
+  const { show, wallpaper,showProject } = useContext(DesktopContext);
   return (
     <div
       className="w-screen h-screen flex justify-center items-center text-colorWhite font-semibold"
       onClick={() => sound.play()}
     >
       <Drag>
-        <h1 className="absolute selection:not-sr-only text-2xl w-1/2 bottom-20 left-14 cursor-default">
-          Hi, I'm <span className="font text-3xl"> Manoj Singh Dashauni</span>, a web developer specializing in JavaScript, React.js,
-          TypeScript, HTML, and CSS. I create modern, responsive websites with
-          clean design and seamless user experiences.
-        </h1>
+        <BioData/>
         <Desktop />
         <Music />
         <Wallpaper />
+        <Project/>
         <Tip />
         {show ? <Model /> : null}
+        {showProject ? <ProjectModel /> : null}
         {wallpaper && (
           <img
-            className="object-cover object-center h-screen w-screen"
-            src={wallpaper}
+          className="object-cover object-center h-screen w-screen"
+          src={wallpaper}
           />
-        )}
+          )}
       </Drag>
     </div>
   );

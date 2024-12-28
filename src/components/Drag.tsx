@@ -14,7 +14,7 @@ const Drag: React.FC<DesktopProps> = ({ children }) => {
     >
       {React.Children.map(children, (child) =>
         React.isValidElement(child)
-          ? React.cloneElement(child,)
+          ? React.cloneElement(child)
           : child
       )}
     </div>

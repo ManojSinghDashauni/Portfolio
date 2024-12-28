@@ -1,11 +1,9 @@
-import Backward from "../icons/Backward";
-import Forward from "../icons/Forward";
-import Play from "../icons/Play";
+import {Backward, Forward, Pause, Play} from "../icons/Index";
+
 import { motion } from "framer-motion";
 import { MusicList } from "../data/MusicList";
 import { DraggableProps } from "../types/Type";
 import { useRef, useState } from "react";
-import Pause from "../icons/Pause";
 import songFile from "../assets/music/Kendrick Lamar, SZA - All The Stars.mp3";
 
 

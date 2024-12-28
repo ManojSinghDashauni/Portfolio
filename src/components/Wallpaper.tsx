@@ -34,7 +34,7 @@ const Wallpaper: React.FC<DraggableProps> = ({ dragConstraints }) => {
             className="absolute top-56 right-96 w-16 h-16  cursor-grab flex justify-center items-center flex-col"
             onClick={handleChooseImage}
         >
-            <img draggable="false"  src={Photo} alt="photo" className=" hover:scale-110 transition-all" />
+            <img draggable="false"  src={Photo} alt="the john wick" className=" hover:scale-110 transition-all" />
             <h1>Wallpaper</h1>
             <input type="file" ref={inputRef} onChange={handleImage} className="hidden"></input>
         </motion.div>
