@@ -1,23 +1,29 @@
-import { useState } from "react";
-import Folder from "../assets/icons/folder.png"
-import { Model } from "./Model";
+import { useContext } from "react";
+import Folder from "../assets/icons/folder.png";
+import { DraggableProps } from "../types/Type";
+import { motion } from "framer-motion";
+import  DesktopContext  from "../context/DesktopContext";
 
 
-
-const Desktop = () => {
-    const[show,setShow] =useState<true | false>(false)
+const Desktop: React.FC<DraggableProps> = ({ dragConstraints }) => {
+    const {setShow,show} = useContext(DesktopContext);
 
     return (
-        <div>
-            <button className="w-16 h-16 hover:scale-110 transition-all" onClick={()=>setShow(true)}>
-                <img src={Folder} alt="github" />
-            </button>
+        <motion.div
+            drag
+            dragConstraints={dragConstraints}
+            dragTransition={{
+                power: 0,
+                bounceStiffness: 100, 
+                bounceDamping: 10, 
+            }}
+            className="absolute top-20 right-96 w-16 h-16  cursor-grab flex justify-center items-center flex-col"
+            onClick={() => setShow(!show)}
+        >
+            <img draggable="false"  src={Folder} alt="folder" className="hover:scale-110 transition-all" />
+            <h1>Desktop</h1>
+        </motion.div>
+    );
+};
 
-            {
-                show ? <Model setShow={setShow}/> : null
-            }
-        </div>
-    )
-}
-
-export default Desktop
+export default Desktop;

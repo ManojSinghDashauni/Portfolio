@@ -7,6 +7,9 @@ export default {
   theme: {
     extend: {
     },
+    backgroundImage: {
+      'wall': "url('/src/assets/wall1.jpg')",
+    },
     colors: {
       colorred : '#ff4531',
       colororange : '#ff9f0a',
@@ -14,6 +17,8 @@ export default {
       colorgreen : '#32d74b',
       colorgray : '#98989d',
       colordark : '#333333',
+      colorWhite: '#fff',
+      colorBlack: "#000",
     }
   },
   plugins: [],

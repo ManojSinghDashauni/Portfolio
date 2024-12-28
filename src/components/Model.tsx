@@ -1,19 +1,28 @@
 import Github from "../assets/icons/github.png";
 import LinkedIn from "../assets/icons/linkedin.webp";
 import Gmail from "../assets/icons/gmail.png";
-import { SetStateAction } from "react";
+import { useContext } from "react";
+import { motion } from "framer-motion";
+import DesktopContext from "../context/DesktopContext";
+import { DraggableProps } from "../types/Type";
 
-type ModelProps = {
-    setShow : React.Dispatch<SetStateAction<boolean>>;
-}
 
-export const Model = ({setShow}:ModelProps) => {
+export const Model: React.FC<DraggableProps> = ({ dragConstraints }) => {
+    const {setShow} = useContext(DesktopContext);
     return (
-        <div className="bg-colorgray w-[550px] h-[250px] rounded-xl grid grid-rows-[_40px_1fr]">
+        <motion.div
+        drag
+        dragConstraints={dragConstraints}
+        dragTransition={{
+            power: 0, 
+            bounceStiffness: 100,
+            bounceDamping: 10,
+        }}
+        className="absolute top-[20%] left-[50%] bg-colorgray w-[550px] h-[250px] rounded-xl grid grid-rows-[_40px_1fr] cursor-grab">
             <div className=" flex gap-1 p-3">
                 <button className="btn bg-colorred" onClick={()=> setShow(false)}></button>
-                <button className="btn bg-colororange"></button>
-                <button className="btn bg-colorgreen"></button>
+                <button disabled className="btn bg-colororange cursor-not-allowed"></button>
+                <button disabled className="btn bg-colorgreen cursor-not-allowed"></button>
             </div>
             <div className="grid grid-cols-6 gap-6 grid-flow-row bg-colordark p-6 rounded-b-xl">
                 <button className="w-16 h-16 hover:hover:scale-110 transition-all">
@@ -22,17 +31,16 @@ export const Model = ({setShow}:ModelProps) => {
                     </a>
                 </button>
                 <button className="w-16 h-16 hover:hover:scale-110 transition-all">
-                    <a href="https://github.com/ManojSinghDashauni" target="_blank" rel="noopener noreferrer">
-                        <img src={Gmail} alt="github" />
+                    <a href="mailto:Dashuni007@gmail.com" target="_blank" rel="noopener noreferrer">
+                        <img src={Gmail} alt="Gmail" />
                     </a>
                 </button>
                 <button className="w-16 h-16 scale-90 hover:scale-100 transition-all">
-                    <a href="https://github.com/ManojSinghDashauni" target="_blank" rel="noopener noreferrer">
-                        <img src={LinkedIn} alt="github" />
+                    <a href="https://www.linkedin.com/in/manoj-dashauni-216a8233a/" target="_blank" rel="noopener noreferrer">
+                        <img src={LinkedIn} alt="Linkedin" />
                     </a>
                 </button>
-
             </div>
-        </div>
+        </motion.div>
     );
 };
