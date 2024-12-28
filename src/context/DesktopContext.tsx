@@ -1,11 +1,11 @@
-import React, {SetStateAction, createContext, useState } from 'react'
+import React, { createContext, useState } from 'react'
 import { childrenProps } from '../types/Type';
 import wall1 from "../assets/wall1.jpg"
 
 type ModelProps = {
     show:true | false,
-    setShow :React.Dispatch<React.SetStateAction<boolean>>,
-    setWallpaper:React.Dispatch<React.SetStateAction<string>>,
+    setShow :(value:true|false)=>void,
+    setWallpaper:(url:string)=>void,
     wallpaper:string,
 }
 
