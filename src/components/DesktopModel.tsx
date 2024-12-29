@@ -1,6 +1,6 @@
 import { Github, Gmail, LinkedIn, Folder } from "../assets/icons/Index";
 import { useContext } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import DesktopContext from "../context/DesktopContext";
 import { DraggableProps } from "../types/Type";
 
