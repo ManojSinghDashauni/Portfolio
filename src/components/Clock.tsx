@@ -12,7 +12,7 @@ const Clock = () => {
     return () => clearInterval(intervalId);
   }, []);
   return (
-    <div className="absolute right-12 top-4 flex gap-2 ">
+    <div className="absolute sm:right-12 right-6 top-6 flex gap-2 ">
       <div>{date} </div>
       <div>{time}</div>
     </div>

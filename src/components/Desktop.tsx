@@ -17,7 +17,7 @@ const Desktop: React.FC<DraggableProps> = ({ dragConstraints }) => {
                 bounceStiffness: 100, 
                 bounceDamping: 10, 
             }}
-            className="absolute top-20 right-96 w-16 h-16  cursor-grab flex justify-center items-center flex-col"
+            className="absolute top-20 sm:right-96 right-40 w-16 h-16  cursor-grab flex justify-center items-center flex-col"
             onClick={() => setShow(!show)}
         >
             <img draggable="false"  src={Folder} alt="folder" className="hover:scale-110 transition-all" />

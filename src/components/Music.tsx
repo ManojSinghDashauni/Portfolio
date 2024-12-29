@@ -72,7 +72,7 @@ const Music: React.FC<DraggableProps> = ({ dragConstraints }) => {
         bounceStiffness: 100,
         bounceDamping: 10,
       }}
-      className="absolute top-40 left-36 bg-colorgray h-36 w-80 rounded-xl grid grid-rows-[_40px_1fr] cursor-grabbing"
+      className="absolute top-96 sm:top-40  sm:left-36 bg-colorgray h-36 w-80 rounded-xl grid grid-rows-[_40px_1fr] cursor-grabbing"
     >
       <div className=" flex gap-1 p-3">
         <button disabled className="btn bg-colorred"></button> 

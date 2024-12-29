@@ -18,7 +18,7 @@ const ProjectModel: React.FC<DraggableProps> = ({ dragConstraints }) => {
             }}
             initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
-            className="absolute top-[20%] left-[20%] bg-colorgray w-[550px] h-[250px] rounded-xl grid grid-rows-[_40px_1fr] cursor-grab"
+            className="absolute top-[20%] sm:left-[20%] left[20%] bg-colorgray sm:w-[550px] sm:h-[250px] w-80 rounded-xl grid grid-rows-[_40px_1fr] cursor-grab"
         >
             <div className="grid grid-cols-[_100px_1fr]">
                 <div className=" flex gap-1 p-3">
@@ -40,14 +40,14 @@ const ProjectModel: React.FC<DraggableProps> = ({ dragConstraints }) => {
                     <h1>Projects</h1>
                 </div>
             </div>
-            <div className="grid grid-cols-4 gap-6 grid-flow-row bg-colordark p-6 rounded-b-xl">
+            <div className="grid sm:grid-cols-4 grid-cols-3 sm:gap-6 gap-4 grid-flow-row bg-colordark p-6 rounded-b-xl">
                 {
                    ProjectList && ProjectList.map((project)=>(
                     <a
                     key={project.id}
                     href={project.projectLink}
                     target="_blank"
-                    className="flex flex-col justify-start items-center w-32"
+                    className="flex flex-col justify-start items-center sm:w-32 w-auto"
                 >
                     <img
                         src={project.projectSrc}

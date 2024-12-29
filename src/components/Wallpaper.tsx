@@ -31,7 +31,7 @@ const Wallpaper: React.FC<DraggableProps> = ({ dragConstraints }) => {
                 bounceStiffness: 100, 
                 bounceDamping: 10,
             }}
-            className="absolute top-56 right-96 w-16 h-16  cursor-grab flex justify-center items-center flex-col"
+            className="absolute top-56 sm:right-96 right-10 w-16 h-16  cursor-grab flex justify-center items-center flex-col"
             onClick={handleChooseImage}
         >
             <img draggable="false"  src={Photo} alt="the john wick" className=" hover:scale-110 transition-all" />

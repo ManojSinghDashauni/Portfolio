@@ -17,7 +17,7 @@ const DesktopModel: React.FC<DraggableProps> = ({ dragConstraints }) => {
         }}
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="absolute top-[20%] left-[60%] bg-colorgray w-[550px] h-[250px] rounded-xl grid grid-rows-[_40px_1fr] cursor-grab"
+        className="absolute top-[20%] sm:left-[60%] left[20%] bg-colorgray sm:w-[550px] sm:h-[250px] h-36 w-80  rounded-xl grid grid-rows-[_40px_1fr] cursor-grab"
       >
         <div className="grid grid-cols-[_100px_1fr]">
           <div className=" flex gap-1 p-3">
@@ -39,7 +39,7 @@ const DesktopModel: React.FC<DraggableProps> = ({ dragConstraints }) => {
             <h1>Files</h1>
           </div>
         </div>
-        <div className="grid grid-cols-6 gap-6 grid-flow-row bg-colordark p-6 rounded-b-xl">
+        <div className="grid sm:grid-cols-6 grid-cols-4 gap-6 grid-flow-row bg-colordark p-6 rounded-b-xl">
           <button className="w-16 h-16 hover:hover:scale-110 transition-all">
             <a
               href="https://github.com/ManojSinghDashauni"
