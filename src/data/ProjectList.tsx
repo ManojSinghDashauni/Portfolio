@@ -37,4 +37,13 @@ export const ProjectList = [
         projectSrc : Gemini,
         projectLink : "https://02-typescript-tic-tac-toe.vercel.app/"
     },
+
+    {
+        id:6,
+        projectTitle:"Product list - ecom",
+        projectSrc : Gemini,
+        projectLink : "https://20-product-list.vercel.app/"
+    },
+
+    
 ]
