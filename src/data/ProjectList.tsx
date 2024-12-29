@@ -11,7 +11,7 @@ export const ProjectList = [
         id:2,
         projectTitle:"Country api",
         projectSrc : Gemini,
-        projectLink : "https://vercel.com/next-js-blog-blackmans-projects/22-country-api"
+        projectLink : "https://22-country-api-rjtz.vercel.app/"
     },
     {
         id:3,
@@ -24,5 +24,17 @@ export const ProjectList = [
         projectTitle:"Sanity based Blog upload website",
         projectSrc : Gemini,
         projectLink : "https://blackman-gray.vercel.app/"
+    },
+    {
+        id:5,
+        projectTitle:"Daily Planner with authentication",
+        projectSrc : Gemini,
+        projectLink : "https://29-todo.vercel.app/"
+    },
+    {
+        id:6,
+        projectTitle:"Tic-Tac-Toe",
+        projectSrc : Gemini,
+        projectLink : "https://02-typescript-tic-tac-toe.vercel.app/"
     },
 ]
