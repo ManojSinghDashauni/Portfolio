@@ -16,6 +16,8 @@ const ProjectModel: React.FC<DraggableProps> = ({ dragConstraints }) => {
                 bounceStiffness: 100,
                 bounceDamping: 10,
             }}
+            initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
             className="absolute top-[20%] left-[20%] bg-colorgray w-[550px] h-[250px] rounded-xl grid grid-rows-[_40px_1fr] cursor-grab"
         >
             <div className="grid grid-cols-[_100px_1fr]">
