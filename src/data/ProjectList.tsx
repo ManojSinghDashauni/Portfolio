@@ -1,4 +1,4 @@
-import { Gemini } from "../assets/projects/Index"
+import { Gemini,blog,country,desert,ecom,note,tictactoe } from "../assets/projects/Index"
 
 export const ProjectList = [
     {
@@ -10,38 +10,38 @@ export const ProjectList = [
     {
         id:2,
         projectTitle:"Country api",
-        projectSrc : Gemini,
+        projectSrc : country,
         projectLink : "https://22-country-api-rjtz.vercel.app/"
     },
     {
         id:3,
         projectTitle:"CMS headless Ecommerce website",
-        projectSrc : Gemini,
+        projectSrc : ecom,
         projectLink : "https://shop-store-nu.vercel.app/"
     },
     {
         id:4,
         projectTitle:"Sanity based Blog upload website",
-        projectSrc : Gemini,
+        projectSrc : blog,
         projectLink : "https://blackman-gray.vercel.app/"
     },
     {
         id:5,
         projectTitle:"Daily Planner with authentication",
-        projectSrc : Gemini,
+        projectSrc : note,
         projectLink : "https://29-todo.vercel.app/"
     },
     {
         id:6,
         projectTitle:"Tic-Tac-Toe",
-        projectSrc : Gemini,
+        projectSrc : tictactoe,
         projectLink : "https://02-typescript-tic-tac-toe.vercel.app/"
     },
 
     {
         id:6,
         projectTitle:"Product list - ecom",
-        projectSrc : Gemini,
+        projectSrc : desert,
         projectLink : "https://20-product-list.vercel.app/"
     },
 
