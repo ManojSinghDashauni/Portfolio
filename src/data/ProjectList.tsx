@@ -7,8 +7,8 @@ function id(){
 export const ProjectList = [
     {
         id:id(),
-        projectTitle:"Product list - ecom",
-        projectSrc : desert,
+        projectTitle:"animation project",
+        projectSrc : note,
         projectLink : "https://framer-motion-award-o1eu.vercel.app/"
     },
     {
