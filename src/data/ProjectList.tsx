@@ -7,6 +7,12 @@ function id(){
 export const ProjectList = [
     {
         id:id(),
+        projectTitle:"animation site 01",
+        projectSrc : tictactoe,
+        projectLink : "https://animation-01-site.vercel.app/"
+    },
+    {
+        id:id(),
         projectTitle:"animation project",
         projectSrc : note,
         projectLink : "https://framer-motion-award-o1eu.vercel.app/"
@@ -53,5 +59,4 @@ export const ProjectList = [
         projectSrc : tictactoe,
         projectLink : "https://02-typescript-tic-tac-toe.vercel.app/"
     },
-    
 ]
